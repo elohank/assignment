@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+  labels:
+    app: react
+spec:
+  replicas: 1
+  minReadySeconds: 30
+  selector:
+    matchLabels:
+      app: react
+  template:
+    metadata: 
+      name: create-container
+      labels:
+        app: react
+    spec:
+      containers:
+      - name: react-container
+        image: elohank/snapshot_react_image:1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+
