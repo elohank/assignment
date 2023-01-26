@@ -3,7 +3,6 @@ phases:
  
   build:
     commands:
-       - cd $CODEBUILD_SRC_DIR
        - yarn install 
 artifacts:
     files:
