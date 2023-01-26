@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ubuntu/app
-sudo yarn start                                  
+sudo systemctl start snapshot.service
